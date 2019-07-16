@@ -1,0 +1,26 @@
+{
+  "name": "curso_express",
+  "version": "1.0.0",
+  "description": "Curso de Express",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  },
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hanonimo025/curso_express.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Hanonimo025/curso_express/issues"
+  },
+  "homepage": "https://github.com/Hanonimo025/curso_express#readme"
+}
