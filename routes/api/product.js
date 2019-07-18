@@ -8,6 +8,7 @@ const productService = new ProductService();
 router.get('/', async (req, res, next) => {
     const { tags } = req.query;
     try {
+        throw new Error('This is an error in the api')
         const products = await productService.getProducts({
             tags
         });
