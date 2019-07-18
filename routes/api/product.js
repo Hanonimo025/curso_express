@@ -38,6 +38,7 @@ router.get('/:productId', async (req, res, next) => {
 
 router.post('/', async (req, res, next) => {
     const { body: product } = req;
+    
     try {
         const createdProduct = await productService.createProduct({
             product
