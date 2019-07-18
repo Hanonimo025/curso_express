@@ -4,16 +4,20 @@ const ProductService = require('../../services/product');
 
 const productService = new ProductService();
 
-router.get('/', async (req, res, next)=>{
-    const { tags } = req.query;
+router.get('/', async (req, res, next) => {
+    const {
+        tags
+    } = req.query;
     try {
-        throw new Error('this is an error');
-        const products = await productService.getProducts({tags});
-        res.render('products', {products});    
+        const products = await productService.getProducts({
+            tags
+        });
+        res.render('products', {
+            products
+        });
     } catch (err) {
         next(err)
     }
 });
 
 module.exports = router;
-
