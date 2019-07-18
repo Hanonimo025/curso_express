@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-const productRouter = require('./routes/product');
+const productRouter = require('./routes/views/product');
 const productRouterApi = require('./routes/api/product')
 
 app.set('views', path.join(__dirname, 'views'));
