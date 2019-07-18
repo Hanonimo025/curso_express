@@ -2,6 +2,8 @@ const express = require('express');
 const path = require('path');
 const productRouter = require('./routes/views/product');
 const productRouterApi = require('./routes/api/product');
+const authApiRouter = require('./routes/api/auth');
+
 const isRequestAjaxOrApi = require('./utils/isRequestAjaxOrApi');
 const boom = require('boom');
 
@@ -25,6 +27,8 @@ app.set('view engine', 'pug');
 
 app.use('/products', productRouter);
 app.use('/api/products', productRouterApi);
+app.use('/api/auth', authApiRouter);
+
 
 //redirect
 app.get('/', (req,res)=>{
