@@ -25,13 +25,13 @@ class ProductService {
     }
 
     async updateProduct({productId, product}){
-        const product = await this.mongoDb.update(this.collection, productId, product);
-        return product;
+        const productUpdated = await this.mongoDb.update(this.collection, productId, product);
+        return productUpdated;
     }
 
     async deleteProduct({productId}){
-        const product = await this.mongoDb.delete(this.collection, productId);
-        return product;
+        const productDeleted = await this.mongoDb.delete(this.collection, productId);
+        return productDeleted;
     }
 
 }

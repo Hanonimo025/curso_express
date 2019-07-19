@@ -37,7 +37,7 @@ function clientErrorHandler(err, req, res, next) {
 }
 
 function errorHandler(err, req, res, next){
-    
+    console.log('Este es el error:',err)
     const {
         output: {statusCode, payload}
     } = err;
